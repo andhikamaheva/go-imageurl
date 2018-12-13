@@ -23,6 +23,9 @@ const (
 	// TIFF ...
 	TIFF ImageType = "tiff"
 
+	// SVG ...
+	SVG ImageType = "svg"
+
 	// Unknown ...
 	Unknown ImageType = "unknown"
 )
