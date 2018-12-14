@@ -17,7 +17,7 @@ func TestGetFileName(t *testing.T) {
 
 	fileName := imageURL.SetURI("https://dummyimage.com/600x400/000/fff.jpg").GetFileName()
 
-	is.Equal("fff.jpgx", fileName)
+	is.Equal("fff.jpg", fileName)
 }
 
 func TestJPGImage(t *testing.T) {
