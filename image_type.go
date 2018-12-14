@@ -1,6 +1,6 @@
 package imageurl
 
-// ImageType : type of images
+// ImageType : represents of image type that can detect by image-url package, if image type is not detected will return unkown
 type ImageType string
 
 const (
