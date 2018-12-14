@@ -1,8 +1,10 @@
 language: go
 go:
-  - 1.9.7
+  - "1.9.x"
   - tip
 install:
+  - go get github.com/cheekybits/is
   - go get github.com/andhikamaheva/image-url
+  - go test ./...
 notifications:
   email: false

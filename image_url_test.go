@@ -11,14 +11,13 @@ import (
 /* imageURL.URI = "" */
 
 func TestGetFileName(t *testing.T) {
-
 	is := is.New(t)
 
 	imageURL := ImageURL{}
 
 	fileName := imageURL.SetURI("https://dummyimage.com/600x400/000/fff.jpg").GetFileName()
 
-	is.Equal("fff.jpg", fileName)
+	is.Equal("fff.jpgx", fileName)
 }
 
 func TestJPGImage(t *testing.T) {
@@ -102,6 +101,7 @@ func TestGetImageSize(t *testing.T) {
 
 // TestSaveImage ...
 func TestSaveImage(t *testing.T) {
+
 	is := is.New(t)
 	imageURL := ImageURL{}
 
