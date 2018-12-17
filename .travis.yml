@@ -4,7 +4,7 @@ go:
   - tip
 install:
   - go get github.com/cheekybits/is
-  - go get github.com/andhikamaheva/go-imageurl/go
+  - go get github.com/andhikamaheva/go-imageurl/imageurl
   - go test ./...
 notifications:
   email: false
