@@ -1,6 +1,6 @@
-# image-url
+# go-imageurl
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/andhikamaheva/image-url)](https://goreportcard.com/report/github.com/andhikamaheva/image-url) [![GoDoc](https://godoc.org/github.com/andhikamaheva/image-url?status.svg)](https://godoc.org/github.com/andhikamaheva/image-url) [![Build Status](https://travis-ci.org/andhikamaheva/image-url.svg?branch=master)](https://travis-ci.org/andhikamaheva/image-url)
+[![Go Report Card](https://goreportcard.com/badge/github.com/andhikamaheva/go-imageurl)](https://goreportcard.com/report/github.com/andhikamaheva/go-imageurl) [![GoDoc](https://godoc.org/github.com/andhikamaheva/go-imageurl?status.svg)](https://godoc.org/github.com/andhikamaheva/go-imageurl) [![Build Status](https://travis-ci.org/andhikamaheva/go-imageurl.svg?branch=master)](https://travis-ci.org/andhikamaheva/go-imageurl)
 
 
 # License
