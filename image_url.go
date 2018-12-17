@@ -16,9 +16,14 @@ type ImageURL struct {
 }
 
 // SetURI ...
-func (i *ImageURL) SetURI(uri string) *ImageURL {
-	i.URI = uri
-	return i
+func SetURI(uri string) *ImageURL {
+	imageURL := &ImageURL{
+		URI: uri,
+	}
+
+	return imageURL
+	/* i.URI = uri
+	return i */
 }
 
 // GetFileName ...
