@@ -15,10 +15,20 @@ type ImageURL struct {
 	URI string
 }
 
+// Init ...
+func Init() *ImageURL {
+	imageURL := &ImageURL{}
+
+	return imageURL
+}
+
 // SetURI ...
-func (i *ImageURL) SetURI(uri string) *ImageURL {
-	i.URI = uri
-	return i
+func SetURI(uri string) *ImageURL {
+	imageURL := &ImageURL{
+		URI: uri,
+	}
+
+	return imageURL
 }
 
 // GetFileName ...

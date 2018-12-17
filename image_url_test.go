@@ -1,6 +1,7 @@
 package imageurl
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"testing"
@@ -13,18 +14,15 @@ import (
 func TestGetFileName(t *testing.T) {
 	is := is.New(t)
 
-	imageURL := ImageURL{}
-
-	fileName := imageURL.SetURI("https://dummyimage.com/600x400/000/fff.jpg").GetFileName()
+	fileName := SetURI("https://dummyimage.com/600x400/000/fff.jpg").GetFileName()
 
 	is.Equal("fff.jpg", fileName)
 }
 
 func TestJPGImage(t *testing.T) {
 	is := is.New(t)
-	imageURL := ImageURL{}
 
-	imageType := imageURL.SetURI("https://dummyimage.com/600x400/000/fff.jpg").GetImageType()
+	imageType := SetURI("https://dummyimage.com/600x400/000/fff.jpg").GetImageType()
 
 	is.Equal("jpg", imageType)
 }
@@ -32,9 +30,8 @@ func TestJPGImage(t *testing.T) {
 // TestJPEGImage ...
 func TestJPEGImage(t *testing.T) {
 	is := is.New(t)
-	imageURL := ImageURL{}
 
-	imageType := imageURL.SetURI("https://dummyimage.com/600x400/000/fff.jpeg").GetImageType()
+	imageType := SetURI("https://dummyimage.com/600x400/000/fff.jpeg").GetImageType()
 
 	is.Equal("jpeg", imageType)
 }
@@ -42,9 +39,8 @@ func TestJPEGImage(t *testing.T) {
 // TestPNGImage ...
 func TestPNGImage(t *testing.T) {
 	is := is.New(t)
-	imageURL := ImageURL{}
 
-	imageType := imageURL.SetURI("https://dummyimage.com/600x400/000/fff.png").GetImageType()
+	imageType := SetURI("https://dummyimage.com/600x400/000/fff.png").GetImageType()
 
 	is.Equal("png", imageType)
 }
@@ -52,9 +48,8 @@ func TestPNGImage(t *testing.T) {
 // TestGIFImage ...
 func TestGIFImage(t *testing.T) {
 	is := is.New(t)
-	imageURL := ImageURL{}
 
-	imageType := imageURL.SetURI("https://dummyimage.com/600x400/000/fff.gif").GetImageType()
+	imageType := SetURI("https://dummyimage.com/600x400/000/fff.gif").GetImageType()
 
 	is.Equal("gif", imageType)
 }
@@ -62,9 +57,8 @@ func TestGIFImage(t *testing.T) {
 // TestBMPImage ...
 func TestBMPImage(t *testing.T) {
 	is := is.New(t)
-	imageURL := ImageURL{}
 
-	imageType := imageURL.SetURI("http://eeweb.poly.edu/~yao/EL5123/image/lena_gray.bmp").GetImageType()
+	imageType := SetURI("http://eeweb.poly.edu/~yao/EL5123/image/lena_gray.bmp").GetImageType()
 
 	is.Equal("bmp", imageType)
 }
@@ -72,9 +66,8 @@ func TestBMPImage(t *testing.T) {
 // TestTIFFImage ...
 func TestTIFFImage(t *testing.T) {
 	is := is.New(t)
-	imageURL := ImageURL{}
 
-	imageType := imageURL.SetURI("http://eeweb.poly.edu/~yao/EL5123/image/lena_color.tiff").GetImageType()
+	imageType := SetURI("http://eeweb.poly.edu/~yao/EL5123/image/lena_color.tiff").GetImageType()
 
 	is.Equal("tiff", imageType)
 }
@@ -82,9 +75,8 @@ func TestTIFFImage(t *testing.T) {
 // TestSVGImage ...
 func TestSVGImage(t *testing.T) {
 	is := is.New(t)
-	imageURL := ImageURL{}
 
-	imageType := imageURL.SetURI("https://placeholder.pics/svg/300").GetImageType()
+	imageType := SetURI("https://placeholder.pics/svg/300").GetImageType()
 
 	is.Equal("svg", imageType)
 }
@@ -92,9 +84,10 @@ func TestSVGImage(t *testing.T) {
 // TestGetImageSize ...
 func TestGetImageSize(t *testing.T) {
 	is := is.New(t)
-	imageURL := ImageURL{}
 
-	imageSize := imageURL.SetURI("https://placeholder.pics/svg/300").GetImageSize()
+	fmt.Println("Tes")
+
+	imageSize := SetURI("https://placeholder.pics/svg/300").GetImageSize()
 
 	is.Equal(322, imageSize)
 }
@@ -103,9 +96,8 @@ func TestGetImageSize(t *testing.T) {
 func TestSaveImage(t *testing.T) {
 
 	is := is.New(t)
-	imageURL := ImageURL{}
 
-	image := imageURL.SetURI("https://dummyimage.com/600x400/000/fff.png")
+	image := SetURI("https://dummyimage.com/600x400/000/fff.png")
 
 	file := image.SaveImage("public/images", image.GetFileName())
 
