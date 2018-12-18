@@ -1,6 +1,6 @@
 package imageurl
 
-// ImageType : represents of image type that can detect by go-imageurl package, if image type is not detected will return unkown
+// ImageType : represents of image type that can detect by go-imageurl package, if image type is not detected will return unknown
 type ImageType string
 
 const (

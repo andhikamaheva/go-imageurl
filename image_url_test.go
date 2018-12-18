@@ -1,7 +1,6 @@
 package imageurl
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 	"testing"
@@ -85,11 +84,18 @@ func TestSVGImage(t *testing.T) {
 func TestGetImageSize(t *testing.T) {
 	is := is.New(t)
 
-	fmt.Println("Tes")
-
 	imageSize := SetURI("https://placeholder.pics/svg/300").GetImageSize()
 
 	is.Equal(322, imageSize)
+}
+
+// TestGetContentType ...
+func TestGetContentType(t *testing.T) {
+	is := is.New(t)
+
+	contentType := SetURI("https://placeholder.pics/svg/300").GetContentType()
+
+	is.Equal("image/svg+xml", contentType)
 }
 
 // TestSaveImage ...

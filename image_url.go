@@ -69,6 +69,21 @@ func (i *ImageURL) GetImageType() ImageType {
 	return Unknown
 }
 
+// GetContentType ...
+func (i *ImageURL) GetContentType() string {
+	client := http.Client{
+		CheckRedirect: func(r *http.Request, via []*http.Request) error {
+			r.URL.Opaque = r.URL.Path
+			return nil
+		},
+	}
+	resp, _ := client.Get(i.URI)
+
+	defer resp.Body.Close()
+
+	return resp.Header["Content-Type"][0]
+}
+
 // GetImageSize ...
 func (i *ImageURL) GetImageSize() int32 {
 	client := http.Client{
